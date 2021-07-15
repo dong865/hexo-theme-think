@@ -1,7 +1,9 @@
 
 [在线演示](http://www.lurenx.cn/)
-[git地址](https://github.com/dong865/hexo-theme-think)
-[码云](https://github.com/dong865/hexo-theme-think)
+
+[git地址](https://github.com/dong865/hexo-theme-think/)
+
+[码云地址](https://gitee.com/dongdonging/hexo-theme-think/)
 
 ## 安装
 进入项目根目录
