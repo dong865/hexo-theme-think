@@ -12,7 +12,7 @@ npm i hexo-theme-think
 ```
 
 ## 使用
-打开根目录的`__config.yml`文件，将`theme`字段设为`lite`
+打开根目录的`__config.yml`文件，将`theme`字段设为`think`
 ```
 theme: think
 ```
@@ -32,7 +32,7 @@ highlight:
 再开启主题目录下`_config.yml`文件中代码高亮
 
 ### 搜索
-打开根目录的`__config.yml`文件，键入下面的代码
+打开根目录的`_config.yml`文件，键入下面的代码
 ```
 search:
   path: search.json

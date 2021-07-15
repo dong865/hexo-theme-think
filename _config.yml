@@ -2,7 +2,7 @@
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 ## theme: landscape
-theme: think
+theme: think-origin
 
 title: 'Think'
 
@@ -55,6 +55,6 @@ search:
 
 # 备案号
 beian:
-  enable: false
-  name: 京ICP备xxx号
+  enable: true
+  name: 豫ICP备17046389号-5
   url: https://beian.miit.gov.cn
