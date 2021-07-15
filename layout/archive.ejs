@@ -1,0 +1,22 @@
+<%- partial('_partial/nav_crumb',{page}) %>
+<% 
+    let dateCursor
+    let params =site.posts.length
+%>
+<div class="archives-list">
+    <p class="h4"><%= params.postTotal %></p>
+    <% site.posts.sort('date', -1).each(function (post) {  %>
+        <div class="archives-year">
+        <% if(date(post.date, "YYYY") !== dateCursor) { %>
+            <% dateCursor = date(post.date, "YYYY") %>
+            <p class="h5"><%= dateCursor %></p>
+        <% } %>
+            <div class="archive-row">        
+                <a href="<%- url_for(post.path) %>" class="archive d-flex py-3 pl-4">
+                    <div class="post-date"><%- date(post.date, "MM-DD") %></div>
+                    <div class="post-title ml-4"><%= post.title %></div>        
+                </a>
+            </div>
+        </div>
+    <% }) %>
+</div>

@@ -1,0 +1,8 @@
+<%- partial('_partial/nav_crumb',{page}) %>
+
+<%- 
+    list_tags(site.tags,{
+        orderby:'time',
+        order:-1,
+    })   
+%>

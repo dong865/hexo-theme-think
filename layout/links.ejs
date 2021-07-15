@@ -1,0 +1,15 @@
+
+<%- partial('_partial/nav_crumb',{page}) %>
+<div class="links d-flex flex-column">
+<% if(theme.links.enable){ 
+        for(const item of theme.links.friends){
+%>
+        <a class="p-2" href="<%- item.link %>"><%- item.title %></a>
+<%
+        }
+    }else{
+%> 
+<%- page.content %>       
+<%  } %>  
+
+</div>

@@ -1,0 +1,60 @@
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+## theme: landscape
+theme: think
+
+title: 'Think'
+
+author: '六年'
+
+highlight:
+  enable: true
+
+menus:
+  主页: /
+  分类: /categories
+  标签: /tags
+  归档: /archives
+  友链: /friends
+
+avatar: /img/avatar.png
+favicon: /img/favicon.ico
+
+# 友联
+links:
+  enable: true
+  title: '友链'
+  friends:
+
+    - {
+      title: '凡蜕博客', 
+      link: 'https://blog.ysboke.cn/'
+    }
+
+    - {
+      title: "Xiao'Blog", 
+      link: 'https://xiaoheixu.top/'
+    }
+
+    - {
+      title: "求索日记", 
+      link: 'https://shuxhan.com/'
+    }
+
+
+
+# 分类
+category:
+  # 分类列表中展示文章的数量, 0则不限制
+  post_limit: 10
+
+# 搜索功能，基于 hexo-generator-search  请确保已安装插件在开启
+search:
+  enable: true
+
+# 备案号
+beian:
+  enable: true
+  name: 豫ICP备17046389号-5
+  url: https://beian.miit.gov.cn

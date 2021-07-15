@@ -1,0 +1,23 @@
+<%- partial('_partial/nav_crumb',{page}) %>
+<% page.posts.each(function (post) { %>
+    <div class="post-list">
+        <h1><a class="text-none title" href="<%- url_for(post.path) %>"><%- post.title %></a></h1>
+        <a class="text-none" href="<%- url_for(post.path) %>">
+            <div class="my-4 post">
+                <% var excerpt = '' %>
+                <% if(post.description) { %>
+                <% excerpt = post.description %>
+                <% } else if(post.excerpt){ %>
+                <% excerpt = post.excerpt %>
+                <% } else if(post.content){ %>
+                <% excerpt = strip_html(post.content).substr(0, 200) %>
+                <% } %>
+                <%- excerpt + '<span class="font-sm">  ...<span>' %>       
+            </div>
+        </a>
+        <div class="font-sm mb-5">
+                <%- date(post.date, config.date_format) %>    
+        </div>
+    </div>
+<% }) %>
+<%- partial('_partial/paginate', {page_info:page}) %>

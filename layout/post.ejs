@@ -1,0 +1,32 @@
+
+<%
+    const menus = theme.menus
+    function getKey(data, value){
+        for(let k in data){       
+            if(data[k] === value){
+                return k
+            }          
+        }   
+    }    
+%>
+<!-- 面包屑导航 -->
+<div class="header-nav mb-4">
+    <a href="/"> <%- getKey(menus, '/') %></a>
+
+    <% 
+        cats = page.categories.forEach(cat => {
+    %>   
+            <a class="item" href="<%- url_for(cat.path)  %>"> <%= titlecase(cat.name)  %></a>
+    <%    
+        })
+
+    %>
+</div>
+
+
+
+
+<div id="article">
+    <div class="title"> <%- titlecase(page.title)  %> </div>
+     <%- page.content %>
+</div>

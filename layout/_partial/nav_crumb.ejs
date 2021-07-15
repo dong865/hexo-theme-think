@@ -1,0 +1,26 @@
+<%
+    const menus = theme.menus
+    function getKey(data, value){
+        for(let k in data){       
+            if(data[k] === value){
+                return k
+            }          
+        }   
+    }    
+%>
+<div class="header-nav mb-4">
+    <a href="/"> <%- getKey(menus, '/') %></a>
+    <% 
+        let nav_path = page.path.split('/')      
+        nav_path.pop()
+        let item_path = '/'
+        nav_path.forEach((item, index) => {
+            item_path += `${item}/`
+            if(index === 0){
+                item = getKey(menus, '/' + item)
+            }     
+    %>
+    <a class="item" href="<%- item_path %>"><%- titlecase(item) %></a>
+    <%  }) %>
+
+</div>

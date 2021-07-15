@@ -1,0 +1,24 @@
+
+
+<nav class="fixed-top">
+    <div class="fixed-top d-flex justify-content-between align-items-center">
+        <input type="checkbox" id="check" class="d-none">
+        <a class="logo" href="/"><%- theme.title || config.title %></a>
+        <label class="menu-btn d-lg-none" for="check">
+            <div class="hamburger-container">
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        
+        <ul class="navbars d-lg-flex align-items-center">
+            <% for ( menu in theme.menus ) { %>
+            <li class="nav-item">
+                <a href="<%- theme.menus[menu] %>" class="nav-link"><%- menu %></a>
+            </li>
+            <% } %>
+        
+        </ul>
+    </div>
+    
+</nav>
