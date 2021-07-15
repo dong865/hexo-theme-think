@@ -55,6 +55,6 @@ search:
 
 # 备案号
 beian:
-  enable: true
-  name: 豫ICP备17046389号-5
+  enable: false
+  name: 京ICP备xxx号
   url: https://beian.miit.gov.cn

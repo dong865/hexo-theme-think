@@ -4,5 +4,9 @@
   "description": "",
   "keywords": ["hexo","theme"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dong865/hexo-theme-think.git"
+  }
 }
