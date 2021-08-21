@@ -308,8 +308,10 @@ nav-shadow {
 }
 
 #article h2 ::after {
-    content: "  ~  ";
-    font-size: 1.3rem;
+    content: "  # ";
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bffa6;
 }
 
 #article h3 {
