@@ -132,7 +132,9 @@ h1 {
 
 nav {
     height: var(--navHeight);
-    background: rgba(255, 255, 255, .98);
+    background: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 nav-shadow {
@@ -308,20 +310,32 @@ nav-shadow {
 #article h2 ::after {
     content: "  ~  ";
     font-size: 1.3rem;
-    font-weight: bold;
 }
 
 #article h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background: linear-gradient(to bottom, transparent 70%, rgba(189, 202, 219, .3) 0) no-repeat;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 #article h4 {
-    font-size: 18px;
-    margin-top: 50px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+#article h5 {
+    font-size: 1.02rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+#article h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2rem;
 }
 
 #article a {
