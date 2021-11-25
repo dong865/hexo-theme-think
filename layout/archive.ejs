@@ -12,7 +12,7 @@
             <p class="h5"><%= dateCursor %></p>
         <% } %>
             <div class="archive-row">        
-                <a href="<%- url_for(post.path) %>" class="archive d-flex py-3 pl-4">
+                <a href="<%- url_for(post.path) %>" class="archive text-none d-flex py-3 pl-4">
                     <div class="post-date"><%- date(post.date, "MM-DD") %></div>
                     <div class="post-title ml-4"><%= post.title %></div>        
                 </a>

@@ -15,7 +15,7 @@
                     <span class="name a-self-center"><%= cat.name %></span>
                 </div>
                 
-                <a class="category-count" href="<%- url_for(cat.path) %>">
+                <a class="category-count text-none" href="<%- url_for(cat.path) %>">
                     <i class="iconfont icon-share mr-1 a-self-center font-lighter"></i>
                     <span class="font-lighter a-self-center"><%= cat.posts.length %></span>
                 </a>
@@ -53,13 +53,13 @@
             if (index && limit && index >= limit) {
         %>
             <div class="d-flex">
-                <a href="<%- url_for(cat.path) %>" class="post-item flex-grow-1 font-lighter">More...</a> 
+                <a href="<%- url_for(cat.path) %>" class="post-item text-none flex-grow-1 font-lighter">More...</a> 
                 <div class="placeholder"></div>
             </div>   
         <% break %>
         <% } else { %>
             <div class="d-flex">
-                <a href="<%- url_for(post.path) %>" class="post-item flex-grow-1"><%= post.title %></a> 
+                <a href="<%- url_for(post.path) %>" class="post-item text-none flex-grow-1"><%= post.title %></a> 
                 <div class="placeholder"></div>
             </div>        
         <%

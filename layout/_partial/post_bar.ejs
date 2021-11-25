@@ -1,0 +1,54 @@
+<div class="d-flex flex-wrap a-center mb-5">
+    <div class="mr-3">
+        <i class="iconfont icon-time font-gray font-sm"></i>
+        <span class="font-gray font-sm"><%- date(post_info.date, config.date_format) %> </span>
+           
+    </div>
+    <span class="mr-3 font-gray font-xs">|</span>
+    <div class="mr-3">
+        <i class="iconfont font-gray icon-folder font-sm mr-1"></i>
+        <% 
+            formatCat(post_info.categories)
+        %>   
+    </div>
+    <span class="mr-3 font-gray font-xxs">|</span>
+    <div>
+        <% 
+            formatTag(post_info.tags)
+        %>   
+    </div>
+   
+</div>
+
+<% 
+    // 格式化分类
+    function formatCat(data){
+        data.forEach((item,index) => {
+            if (index === 0) {
+%> 
+            <a class="font-gray font-sm" href="<%- url_for(item.path)  %>">          
+                <%= titlecase(item.name)  %>
+            </a>
+            <%  }else{ %>  
+                <a class="sign font-gray font-sm" href="<%- url_for(item.path)  %>">                   
+                    <%= titlecase(item.name)  %>
+                </a>
+<%    
+            }
+        })
+    }
+    
+%>
+
+<% 
+    // 格式化标签
+    function formatTag(data){
+        data.forEach((item,index) => {
+%> 
+            <a class="font-gray font-sm mr" href="<%- url_for(item.path)  %>">                   
+                # <%= titlecase(item.name)  %>
+            </a>
+<%    
+        })
+    }
+%>

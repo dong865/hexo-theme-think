@@ -28,5 +28,54 @@
 
 <div id="article">
     <div class="title"> <%- titlecase(page.title)  %> </div>
-     <%- page.content %>
+    <div class="info d-flex flex-wrap a-center">
+        <div class="px-2">
+            <i class="iconfont icon-time font-gray font-sm mr"></i>
+            <span class="font-gray font-sm"><%- date(page.date, config.date_format) %>发布 </span>
+        </div>
+        <span class="px-2 font-gray font-xxs"> | </span>
+        <div class="px-2">
+            <% 
+                formatTag(page.tags)
+            %>    
+        </div>
+       
+    </div>
+    <div class="mt-2"><%- page.content %></div>
+    
 </div>
+<div class="font-gray font-xs text-center my-5 py-5">
+    ------------ END ------------    
+</div>
+<% 
+// 留言板
+// <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+// <div id="vcomments"></div>
+//     <script>
+//         new Valine({
+//             el: '#vcomments',
+//             appId: 'QwkK5vGqudLUgVXu4dgveGmW-gzGzoHsz',
+//             appKey: 'SDjMztB7OpP8Cg68m71Tx19r',
+//             placeholder: '马上评论',
+//             enableQQ: true,
+//         })
+// </script>
+%>  
+<%
+    function publish_date(date){
+        return moment(date, "YYYYMMDD").locale('zh-cn').fromNow()
+    }
+%>
+
+<% 
+    // 格式化标签
+    function formatTag(data){
+        data.forEach((item,index) => {
+%> 
+            <a class="font-gray font-sm mr" href="<%- url_for(item.path)  %>">                   
+                # <%= titlecase(item.name)  %>
+            </a>
+<%    
+        })
+    }
+%>

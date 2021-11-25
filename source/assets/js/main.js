@@ -216,6 +216,7 @@ function renderHtml(title, content, url, time) {
 }
 
 function directoryIndex() {
+    if($("#article").length==0) return
     if ($('#dir').length) tocbot.destroy();
     tocbot.init({
         tocSelector: '#dir',
@@ -255,5 +256,3 @@ function goTop() {
     })
 
 }
-
-

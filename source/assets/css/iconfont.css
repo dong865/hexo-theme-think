@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2498736 */
-  src: url('//at.alicdn.com/t/font_2498736_wnnrwaqzefb.woff2?t=1625753979687') format('woff2'),
-       url('//at.alicdn.com/t/font_2498736_wnnrwaqzefb.woff?t=1625753979687') format('woff'),
-       url('//at.alicdn.com/t/font_2498736_wnnrwaqzefb.ttf?t=1625753979687') format('truetype');
+  src: url('//at.alicdn.com/t/font_2498736_6i70fnazltf.woff2?t=1629612572198') format('woff2'),
+       url('//at.alicdn.com/t/font_2498736_6i70fnazltf.woff?t=1629612572198') format('woff'),
+       url('//at.alicdn.com/t/font_2498736_6i70fnazltf.ttf?t=1629612572198') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-folder:before {
+  content: "\e621";
+}
+
+.icon-time:before {
+  content: "\e731";
 }
 
 .icon-top:before {

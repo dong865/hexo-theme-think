@@ -14,10 +14,11 @@
                 <%- excerpt + '<span class="font-sm text-gray "> . . .  <span>' %>       
             </div>
         </a>
-        <div class="font-sm text-gray mb-5">
-                <%- date(post.date, config.date_format) %>    
-        </div>
+        
+        <%- partial('_partial/post_bar', {post_info:post}) %>
+        
     </div>
 <% }) %>
 
 <%- partial('_partial/paginate',{page_info:page}) %>
+

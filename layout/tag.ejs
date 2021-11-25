@@ -15,9 +15,7 @@
                 <%- excerpt + '<span class="font-sm">  ...<span>' %>       
             </div>
         </a>
-        <div class="font-sm mb-5">
-                <%- date(post.date, config.date_format) %>    
-        </div>
+        <%- partial('_partial/post_bar', {post_info:post}) %>
     </div>
 <% }) %>
 
