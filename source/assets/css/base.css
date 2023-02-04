@@ -257,7 +257,7 @@ body{
 .bg-danger{ background-color: var(--danger)!important; }
 .bg-warning{ background-color:var(--warning)!important; }
 .bg-info{ background-color: var(--info)!important; }
-.bg-light{ background-color: var(--light)!important; }
+.bg-light{ background-color: var(--light); }
 .bg-dark{ background-color: var(--dark)!important; }
 .bg-white{ background-color: var(--white)!important; }
 .bg-light-secondary{background-color: #F1F1F1!important;}

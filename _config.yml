@@ -31,16 +31,16 @@ links:
       link: 'https://blog.ysboke.cn/'
     }
     - {
-      title: "Xiao'Blog", 
-      link: 'https://xiaoheixu.top/'
-    }
-    - {
       title: "瑾年", 
       link: 'https://www.mckinleylu.com/'
     }
     - {
-      title: "阿呆博客", 
-      link: 'https://bo.ke/'
+      title: '编程与诗', 
+      link: 'https://www.tjzzz.com'
+    }
+    - {
+      title: 'KUOXO 博客', 
+      link: 'https://kuoxo.com'
     }
 
 language: zh-CN

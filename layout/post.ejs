@@ -24,11 +24,9 @@
 </div>
 
 
-
-
 <div id="article">
-    <div class="title"> <%- titlecase(page.title)  %> </div>
-    <div class="info d-flex flex-wrap a-center">
+    <h1 class="title"> <%- titlecase(page.title)  %> </h1>
+    <div class="info d-flex flex-wrap a-center mb-4 mt-2">
         <div class="px-2">
             <i class="iconfont icon-time font-gray font-sm mr"></i>
             <span class="font-gray font-sm"><%- date(page.date, config.date_format) %>发布 </span>
@@ -47,20 +45,10 @@
 <div class="font-gray font-xs text-center my-5 py-5">
     ------------ END ------------    
 </div>
-<% 
-// 留言板
-// <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-// <div id="vcomments"></div>
-//     <script>
-//         new Valine({
-//             el: '#vcomments',
-//             appId: 'QwkK5vGqudLUgVXu4dgveGmW-gzGzoHsz',
-//             appKey: 'SDjMztB7OpP8Cg68m71Tx19r',
-//             placeholder: '马上评论',
-//             enableQQ: true,
-//         })
-// </script>
-%>  
+
+
+<%- partial('_partial/comment') %>
+
 <%
     function publish_date(date){
         return moment(date, "YYYYMMDD").locale('zh-cn').fromNow()

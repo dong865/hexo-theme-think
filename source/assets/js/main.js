@@ -40,7 +40,13 @@ function getSearch(_input) {
 }
 
 
-// 匹配规则: 如果有多个关键词, 用空格隔开, 必须同时含有输入的关键词的文章才能被匹配
+
+/**
+ * 匹配规则: 如果有多个关键词, 用空格隔开, 必须同时含有输入的关键词的文章才能被匹配
+ * @param {string} data 所有文章
+ * @param {string} _input 关键字
+ * @returns 
+ */
 function searcher(data, _input) {
 
     let keywords = _input.trim().toLowerCase()
@@ -68,7 +74,7 @@ function searcher(data, _input) {
             $('#body').css({ display: 'none' })
             _search.removeClass('none').addClass('show')
             // 匹配标题, 替换关键字
-            title = title.replace(new RegExp(keywords_match, 'ig'), `<strong>$&</strong>`)
+            title = title.replace(new RegExp(keywords_match, 'ig'), `<search>$&</search>`)
             title = strUpperCase(labelUpperCase(title))
             let content = matchContent(item.content, keywords)
             // 获取时间
@@ -145,13 +151,13 @@ function wordsContext(data, keywords, index) {
         end = slice_length
     }
     let content_slice = data.slice(start, end) // 截取内容
-    return content_slice.replace(new RegExp(keywords, 'ig'), `<strong>$&</strong>`)
+    return content_slice.replace(new RegExp(keywords, 'ig'), `<search>$&</search>`)
 
 }
 
 // 标签在第一位的首字母转换成大写
 function labelUpperCase(str) {
-    let label = '<strong>'
+    let label = '<search>'
     if (str.indexOf(label) === 0) {
         subStr = str.substr(label.length)
         str = label + subStr.charAt(0).toUpperCase() + subStr.slice(1)
@@ -177,7 +183,7 @@ function strUpperCase(str) {
 
 // 获取时间
 function getTime(data) {
-    return data.substr(1, 11).replace(/\//g, '-')
+    return data.substr(1, 10).replace(/\//g, '-')
 }
 
 // 数组去重
@@ -197,7 +203,6 @@ function uniqueArr(arr) {
  * @returns 
  */
 function renderHtml(title, content, url, time) {
-
     const html = `
         <div class="post-list">
             <h1><a class="title" style="font-family: monospace;" href="${url}"> ${title} </a></h1>      
@@ -207,7 +212,7 @@ function renderHtml(title, content, url, time) {
                     <span class="font-sm">  ...<span>       
                 </div>
             </a>
-            <div class="font-sm mb-5">
+            <div class="font-sm text-gray mb-5">
                 ${time}
             </div>
         </div>`

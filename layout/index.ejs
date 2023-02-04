@@ -1,20 +1,20 @@
 <% page.posts.each(function (post) { %>
     <div class="post-list">
         <h1><a class="title" style="font-family: monospace;" href="<%- url_for(post.path) %>"><%- titlecase(post.title)  %></a></h1>
-        <a class="text-none" href="<%- url_for(post.path) %>">
-            <div class="my-3 post">
-                <% var excerpt = '' %>
-                <% if(post.description) { %>
-                <% excerpt = post.description %>
-                <% } else if(post.excerpt){ %>
-                <% excerpt = post.excerpt %>
-                <% } else if(post.content){ %>
-                <% excerpt = strip_html(post.content).substr(0, 200) %>
-                <% } %>
-                <%- excerpt + '<span class="font-sm text-gray "> . . .  <span>' %>       
-            </div>
-        </a>
-        
+        <div class="my-4 post">
+            <% var excerpt = '' %>
+            <% if(post.description) { %>
+            <% excerpt = post.description %>
+            <% } else if(post.excerpt){ %>
+            <% excerpt = post.excerpt %>
+            <% } else if(post.content){ %>
+            <% excerpt = strip_html(post.content).substr(0, 120) %>
+            <% } %>
+            <%- excerpt %>   
+            <a class="ml-3 font-sm text-gray read-more" href="<%- url_for(post.path) %>"> 
+                Read More ...
+            </a>    
+        </div>
         <%- partial('_partial/post_bar', {post_info:post}) %>
         
     </div>
